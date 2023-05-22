@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DirtyData Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<header>
+  <nav>
+    <div class="logo">
+      <img src="Capture.PNG" alt="Dirty Data Logo">
+    </div>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+     <li><a href="game.html">CO2 Game</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="game-wrapper">
+  <div id="round-container">
+    <p id="current-round" class="hidden">Round: 0</p>
+    <div id="game-container">
+      <div id="website1-container" class="website-container">
+        <h2 id="website1-domain"></h2>
+        <p id="website1-name"></p>
+        <p id="website1-co2-per-month" class="hidden"></p>
+      </div>
+      <div id="vs-container" class="hidden">
+        <p>VS</p>
+      </div>
+      <div id="website2-container" class="website-container">
+        <h2 id="website2-domain"></h2>
+        <p id="website2-name"></p>
+        <p id="website2-co2-per-month" class="hidden"></p>
+      </div>
+    </div>
+  </div>
+
+  <main class="hero">
+    <div class="hero-content">
+      <h2>Rules</h2>
+      <p>Guess which website has the highest CO2 emission every round
+        and see if you can make the High Score Boards.
+      </p>
+    </div>
+  </main>
+
+  <p id="result-message-container" class="hidden"></p>
+
+  <div id="button-container">
+    <button id="start-button" class="hidden">Start Game</button>
+    <button id="play-again-button" class="hidden">Play Again</button>
+    <button id="next-button" class="hidden">Next</button>
+  </div>
+
+  <div id="score-container" class="hidden">
+    <div id="score-info">
+      <p id="streak">Streak: 0</p>
+      <p id="high-streak">High Streak: 0</p>
+      <p id="total-score">Total Score: 0</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <nav>
+    <p> &copy; 2023 DirtyData. All rights reserved.</p>
+    <ul class="footer-menu">
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Terms of Service</a></li>
+    </ul>
+  </nav>
+</footer>
+
+<script src="./main.js" type="module"></script>
+<script src="./api.js" type="module"></script>
+<script src="./dom.js" type="module"></script>
+<script src="./utils.js" type="module"></script>
+<script src="./storage.js" type="module"></script>
+
+</body>
+
+</html>

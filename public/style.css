@@ -1,0 +1,391 @@
+html,
+body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("treetop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: #211600;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+header nav ul li a {
+  color: white;
+}
+
+header nav {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 110px;
+  height: auto;
+  margin-top: 20px;
+  margin-right: auto;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin-top: 0px;
+  margin-left: auto;
+}
+
+.menu li {
+  margin: 10px;
+}
+
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  color: #ccc;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  background-color: #15491e;
+  width: 98%;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+main {
+  margin-top: 70px;
+}
+
+.hero {
+  margin: 10px;
+  text-align: center;
+  width: auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 20px;
+  position: absolute;
+  top: 30%;
+}
+
+.hero-content {
+  text-align: center;
+  width: 400px;
+  padding: 20px;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.hero-content h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.hero-content h2 {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.play-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6dbb66;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.play-btn:hover {
+  background-color: #5ca157;
+  transform: scale(1.05);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+footer {
+  background-color: #211600;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer-menu {
+  list-style-type: none;
+}
+
+.footer-menu li {
+  display: inline-block;
+}
+
+.footer-menu li a {
+  align-items: center;
+  text-decoration: underline;
+  color: #fff;
+  margin-left: auto;
+}
+
+header,
+footer {
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 20px;
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about-container h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.about-container h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.about-container p {
+  margin-bottom: 20px;
+}
+
+.about-container ul {
+  margin-bottom: 20px;
+  list-style: none;
+}
+
+.about-container ul li {
+  margin-bottom: 5px;
+}
+
+#round-container {
+  text-align: center;
+  margin-top: 140px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#current-round {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  padding: 20px;
+  margin: 0;
+}
+
+#game-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.);
+  padding: auto;
+  margin: auto;
+  flex-grow: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.game-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+}
+
+.website-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto ;
+  cursor: pointer;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding: 30px;
+  border-radius: 20px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.website-container:hover {
+  background-color: black;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.website-container.correct {
+  background-color: green;
+}
+
+.website-container.incorrect {
+  background-color: red;
+}
+
+#vs-container {
+  font-size: 2rem;
+  font-weight: bold;
+  justify-content: center;
+  color: white;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+#button-container button {
+  font-size: 1.2rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #6dbb66;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 70%;
+}
+
+#button-container button:hover {
+  background-color: #0a2c0a;
+  transform: scale(1.05);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#score-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  margin: 20px auto;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 75%;
+}
+
+#score-container p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  margin: 0 1rem;
+}
+
+#score-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#streak,
+#high-streak,
+#total-score {
+  flex-grow: 1;
+  text-align: center;
+}
+
+#result-message-container {
+  margin: 2rem 0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hidden {
+  display: none;
+}
+
+html,
+body {
+  height: 100%;
+}
