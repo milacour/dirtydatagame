@@ -1,4 +1,4 @@
-const API_URL = "https://dirtydata.onrender.com/websites";
+const API_URL = "https://dirtydta.onrender.com/websites";
 
 let website1, website2;
 
