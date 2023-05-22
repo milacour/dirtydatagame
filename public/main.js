@@ -35,6 +35,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   startButton.classList.remove("hidden");
   startButton.addEventListener("click", startGame);
 
+
   function startGame() {
     startButton.classList.add("hidden");
     document.querySelector("main.hero").classList.add("hidden");
@@ -66,7 +67,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     currentRound += 1;
     currentRoundElement.textContent = `Round: ${currentRound}`;
     streakElement.classList.remove("hidden");
-    highStreakElement.classList.remove("hidden");
     totalScoreElement.classList.remove("hidden");
     resultMessageElement.classList.add("hidden");
     nextButton.classList.add("hidden");
@@ -103,7 +103,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
       });
   }
   
-
   function handleGuessResult(guessResult, clickedContainer) {
     website1Container.removeEventListener("click", handleWebsite1Click);
     website2Container.removeEventListener("click", handleWebsite2Click);
@@ -112,47 +111,69 @@ window.addEventListener('DOMContentLoaded', (event) => {
     website2Container.classList.remove("correct", "incorrect");
 
     if (guessResult === "correct") {
-      updateRound(true);
-      resultMessageElement.textContent = "Correct!";
-      clickedContainer.classList.add("correct");
+        updateRound(true);
+        resultMessageElement.textContent = "Correct!";
+        clickedContainer.classList.add("correct");
     } else if (guessResult === "incorrect") {
-      updateRound(false);
-      resultMessageElement.textContent = "Incorrect!";
-      clickedContainer.classList.add("incorrect");
+        updateRound(false);
+        resultMessageElement.textContent = "Incorrect!";
+        clickedContainer.classList.add("incorrect");
     }
 
     const website1Co2Tons = Math.round(website1.co2_per_month / 1000);
     const website2Co2Tons = Math.round(website2.co2_per_month / 1000);
 
-    website1Co2Element.textContent = `CO2 per Month: ${website1Co2Tons} tons`;
-    website2Co2Element.textContent = `CO2 per Month: ${website2Co2Tons} tons`;
+    website1Co2Element.innerHTML = `CO2/Month: <br/> <span id="website1-co2-value"><b>${website1Co2Tons}</b></span> tons`;
+    website2Co2Element.innerHTML = `CO2/Month: <br/> <span id="website2-co2-value"><b>${website2Co2Tons}</b></span> tons`;    
 
     website1Co2Element.classList.remove("hidden");
     website2Co2Element.classList.remove("hidden");
 
+    let startValue1 = Math.round(website1Co2Tons * 0.8);
+    let startValue2 = Math.round(website2Co2Tons * 0.8);
+
+    animateValue(document.getElementById("website1-co2-value"), startValue1, website1Co2Tons, 3000);
+    animateValue(document.getElementById("website2-co2-value"), startValue2, website2Co2Tons, 3000);
+
     resultMessageElement.classList.remove("hidden");
     nextButton.classList.remove("hidden");
 
-    if (currentRound === 3) {
-      endGame();
+    if (currentRound === 5) {
+        endGame();
     }
-  }
+    
+    streakElement.textContent = `Streak: ${currentStreak}`;
+    totalScoreElement.textContent = `Score: ${totalScore}`;
+}
+
+function animateValue(element, start, end, duration) {
+    let current = start;
+    const range = end - start;
+    const increment = end > start ? 1 : -1;
+    const stepTime = Math.abs(Math.floor(duration / range));
+    const timer = setInterval(() => {
+        current += increment;
+        element.textContent = current;
+        if (current === end) {
+            clearInterval(timer);
+        }
+    }, stepTime);
+}
 
   function handleWebsite1Click() {
-    let guessResult = compareWebsites("higher", website1, website2);
+    let guessResult = compareWebsites(website1, website1, website2);
     handleGuessResult(guessResult, website1Container);
     website1Container.removeEventListener("click", handleWebsite1Click);
     website2Container.removeEventListener("click", handleWebsite2Click);
   }
   
   function handleWebsite2Click() {
-    let guessResult = compareWebsites("lower", website1, website2);
+    let guessResult = compareWebsites(website2, website1, website2);
     handleGuessResult(guessResult, website2Container);
     website1Container.removeEventListener("click", handleWebsite1Click);
     website2Container.removeEventListener("click", handleWebsite2Click);
   }
   
-
   function updateRound(isCorrect) {
     if (isCorrect) {
       currentStreak += 1;
