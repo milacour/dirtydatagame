@@ -138,10 +138,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
     resultMessageElement.classList.remove("hidden");
     nextButton.classList.remove("hidden");
 
-    if (currentRound === 5) {
+    if (currentRound === 10) {
         endGame();
     }
-    
+
     streakElement.textContent = `Streak: ${currentStreak}`;
     totalScoreElement.textContent = `Score: ${totalScore}`;
 }
