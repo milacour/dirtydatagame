@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/websites";
+const API_URL = "https://dirtydata.onrender.com/websites";
 
 let fetchedWebsites = [];
 
