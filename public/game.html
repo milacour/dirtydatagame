@@ -3,28 +3,30 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DirtyData Game</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dirty Data Game</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<header>
-  <nav>
+<body>
+  
+  <header>
     <div class="logo">
       <img src="capture.png" alt="Dirty Data Logo">
     </div>
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="game.html">CO2 Game</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
-</header>
+    <nav-head>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="game.html">CO2 Game</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="data.html">Data</a></li>
+      </ul>
+    </nav-head>
+  </header>
 
-<div class="game-wrapper">
-  <div id="round-container">
+  <div id="round-container" class="hidden">
     <p id="current-round" class="hidden">Round: 0</p>
-    <div id="game-container">
+    <div id="game-container" class="hidden">
       <div id="website1-container" class="hidden website-container">
         <h2 id="website1-domain"></h2>
         <p id="website1-name"></p>
@@ -42,12 +44,13 @@
   </div>
 
   <main class="hero">
-    <div class="hero-content">
+  
       <h2>Game Info</h2>
-      <p>Guess which website has the highest CO2 emission every round
-        and see if you can make the High Score Boards.</p>
-      <p>Guess based on your knowledge of the websites' number of visitors and the websites' content".</p>
-    </div>
+      <h3>Guess which website has the highest CO2 emissions per month.</h3>
+      <p>DirtyData CO2 Game is a fun and educational application that challenges your knowledge of CO2
+        emissions for different websites.
+        The objective of the game is to guess which website has the highest CO2 emissions per month.
+        You'll be presented with two websites and have to choose the one you believe has the highest CO2 emission</p>
   </main>
 
   <p id="result-message-container" class="hidden"></p>
@@ -70,11 +73,6 @@
   <footer>
     <nav>
       <p> &copy; 2023 DirtyData. All rights reserved.</p>
-      <ul class="footer-menu">
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Service</a></li>
-      </ul>
     </nav>
   </footer>
 

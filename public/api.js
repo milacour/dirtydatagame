@@ -1,8 +1,6 @@
-const API_URL = "https://dirtydata.onrender.com/websites";
+const API_URL = "http://localhost:3000/websites";
 
-let website1, website2;
-
-const fetchedWebsites = [];
+let fetchedWebsites = [];
 
 async function fetchRandomWebsiteData() {
   try {
@@ -10,18 +8,17 @@ async function fetchRandomWebsiteData() {
     const data = await response.json();
 
     if (fetchedWebsites.length === data.length) {
-      fetchedWebsites.length = 0;
+      fetchedWebsites = [];
     }
 
-    while (!website1 || !website2 || website1 === website2 || fetchedWebsites.includes(website1) || fetchedWebsites.includes(website2)) {
+    let website1, website2;
+    do {
       const randomIndex1 = Math.floor(Math.random() * data.length);
       const randomIndex2 = Math.floor(Math.random() * data.length);
 
       website1 = data[randomIndex1];
       website2 = data[randomIndex2];
-    }
-
-    fetchedWebsites.push(website1, website2);
+    } while (!website1 || !website2 || website1 === website2 || fetchedWebsites.includes(website1) || fetchedWebsites.includes(website2));
 
     return [website1, website2];
   } catch (error) {

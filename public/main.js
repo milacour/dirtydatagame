@@ -24,7 +24,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
   const gameContainer = document.getElementById("game-container");
   const vsContainer = document.getElementById("vs-container");
   const scoreContainer = document.getElementById("score-container");
-
+  
+  let fetchedWebsites = [];
   let website1;
   let website2;
   let currentRound = 0;
@@ -97,6 +98,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
   
         website1Container.addEventListener("click", handleWebsite1Click);
         website2Container.addEventListener("click", handleWebsite2Click);
+
+        fetchedWebsites.push(website1, website2); 
       })
       .catch(error => {
         console.error("Fejl ved hentning af websitedata:", error);
@@ -120,8 +123,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
         clickedContainer.classList.add("incorrect");
     }
 
-    const website1Co2Tons = Math.round(website1.co2_per_month / 1000);
-    const website2Co2Tons = Math.round(website2.co2_per_month / 1000);
+    const website1Co2Tons = Math.round(website1.co2_kg_per_month / 1000);
+    const website2Co2Tons = Math.round(website2.co2_kg_per_month / 1000);
 
     website1Co2Element.innerHTML = `CO2/Month: <br/> <span id="website1-co2-value"><b>${website1Co2Tons}</b></span> tons`;
     website2Co2Element.innerHTML = `CO2/Month: <br/> <span id="website2-co2-value"><b>${website2Co2Tons}</b></span> tons`;    
@@ -132,8 +135,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let startValue1 = Math.round(website1Co2Tons * 0.8);
     let startValue2 = Math.round(website2Co2Tons * 0.8);
 
-    animateValue(document.getElementById("website1-co2-value"), startValue1, website1Co2Tons, 3000);
-    animateValue(document.getElementById("website2-co2-value"), startValue2, website2Co2Tons, 3000);
+    animateValue(document.getElementById("website1-co2-value"), startValue1, website1Co2Tons, 500);
+    animateValue(document.getElementById("website2-co2-value"), startValue2, website2Co2Tons, 500);
 
     resultMessageElement.classList.remove("hidden");
     nextButton.classList.remove("hidden");
