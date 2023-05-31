@@ -17,12 +17,5 @@ function compareWebsites(guessedWebsite, website1, website2) {
   }
 }
 
-
-function co2ToTrees(co2) {
-  const treeCo2AbsorbPerYear = 0.0018;
-
-  return Math.round(co2 / treeCo2AbsorbPerYear);
-}
-
-export { compareWebsites, co2ToTrees};
+export { compareWebsites};
 

@@ -27,4 +27,9 @@ async function fetchRandomWebsiteData() {
   }
 }
 
-export { fetchRandomWebsiteData };
+function fetchWebsiteDescription(description, selector) {
+  const descriptionElement = document.querySelector(selector);
+  descriptionElement.textContent = description;
+}
+
+export { fetchRandomWebsiteData, fetchWebsiteDescription };
