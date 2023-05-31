@@ -225,8 +225,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     window.location.href = "./index.html";
   });
 
- showHighScores();
-
 });
 
 
