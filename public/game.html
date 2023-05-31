@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dirty Data Game</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="./main.js" type="module"></script>
+  <script src="./api.js" type="module"></script>
+  <script src="./dom.js" type="module"></script>
+  <script src="./utils.js" type="module"></script>
+  <script src="./storage.js" type="module"></script>
+</head>
+
+<body>
+
+  <header>
+    <nav class="nav-head">
+      <nav class="nav-head">
+        <a href="index.html">
+          <div class="logo logo-head">
+            <img src="capture.png" alt="Dirty Data Logo">
+          </div>
+        </a>
+      <div id="score-container" class="hidden">
+        <div id="score-info">
+          <h2 id="score" class="hidden">Score:</h2>
+          <h2 id="streak" class="hidden">Streak:</h2>
+        </div>
+      </div>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="game.html">CO2 Game</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="data.html">Data</a></li>
+        <li><a href="chart.html">Chart</a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <div id="round-container" class="hidden">
+    <p id="current-round" class="hidden">Round: 0</p>
+    <div id="game-container" class="hidden">
+      <div id="website1-container" class="hidden website-container">
+        <h1 id="website1-domain"></h1>
+        <h2 id="website1-name"></h2>
+        <h3 id="website1-co2-per-month" class="hidden"></h3>
+        <div class="clue1-container" data-website-index="0">
+          <div class="clue">
+            <div class="clue-title"><b>INFO</b></div>
+            <br>
+            <div class="clue-description"></div>
+          </div>
+        </div>
+      </div>
+      <div id="vs-container" class="hidden">
+        <h1>VS</h1>
+      </div>
+      <div id="website2-container" class="hidden website-container">
+        <h1 id="website2-domain"></h1>
+        <h2 id="website2-name"></h2>
+        <h3 id="website2-co2-per-month" class="hidden"></h3>
+        <div class="clue2-container" data-website-index="1">
+          <div class="clue">
+            <div class="clue-title"><b>INFO</b></div>
+            <br>
+            <div class="clue-description"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="hero">
+
+    <h2>Game Info</h2>
+    <h3>Guess which website has the highest CO2 emissions per month.</h3>
+    <p>DirtyData CO2 Game is a fun and educational application that challenges your knowledge of CO2
+      emissions for different websites.
+      The objective of the game is to guess which website has the highest CO2 emissions per month.
+      You'll be presented with two websites and have to choose the one you believe has the highest CO2 emission</p>
+  </main>
+
+  <h3 id="result-message-container" class="hidden"></h3>
+
+  <div id="button-container">
+    <div>
+      <button id="start-button" class="button hidden">Start Game</button>
+      <button id="next-button" class="button hidden">Next</button>
+      <button id="show-chart-button" class="button hidden">Show Chart</button>
+    </div>
+  </div>
+
+  <footer>
+    <nav class="nav-foot">
+      <div id="highScore-container">
+        <div id="score-info">
+          <h2 id="high-score">High Score:</h2>
+        </div>
+      </div>
+      <div id="highStreak-container">
+        <div id="score-info">
+          <h2 id="high-streak">High Streak:</h2>
+        </div>
+      </div>
+    </nav>
+  </footer>
+
+</body>
+
+</html>
