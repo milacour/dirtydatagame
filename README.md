@@ -4,7 +4,7 @@ This is CO2 Game, an interactive web application that challenges users to guess 
 
 ## Game Description
 
-CO2 Game presents the user with two websites and asks them to guess which website has the higher CO2 emissions per month. The user makes a selection by clicking on the respective website, and the game provides feedback on whether the answer is correct or incorrect. The game consists of 10 rounds, and users earn points based on the number of correct guesses and their streak of correct answers.
+DirtData Game presents the user with two websites and asks them to guess which website has the higher CO2 emissions per month. The user makes a selection by clicking on the respective website, and the game provides feedback on whether the answer is correct or incorrect. The game consists of 10 rounds, and users earn points based on the number of correct guesses and their streak of correct answers.
 
 ## Installation and Running
 
