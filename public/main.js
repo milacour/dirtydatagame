@@ -8,7 +8,6 @@ import { showHighScores } from "./dom.js";
 window.addEventListener('DOMContentLoaded', (event) => {
   const startButton = document.getElementById("start-button");
   const nextButton = document.getElementById("next-button");
-  const playAgainButton = document.getElementById("play-again-button");
   const currentRoundElement = document.getElementById("current-round");
   const website1Container = document.getElementById("website1-container");
   const website1NameElement = document.getElementById("website1-name");
